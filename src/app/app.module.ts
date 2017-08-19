@@ -4,6 +4,7 @@ import { NgModule } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { ThreadListComponent } from "./components/thread-list/thread-list.component";
+import { MessageService } from "./services/message-service";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ThreadListComponent } from "./components/thread-list/thread-list.compon
     BrowserModule,
     HttpModule
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
