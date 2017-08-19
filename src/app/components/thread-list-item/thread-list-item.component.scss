@@ -1,0 +1,14 @@
+.list-item-container { 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: .3s all;    
+}
+
+.label {
+    color: #333333;
+}
+
+.active {
+    border-left: 1px solid;
+    padding-left: 10px;
+}

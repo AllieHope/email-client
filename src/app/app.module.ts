@@ -5,13 +5,16 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 import { ThreadListComponent } from "./components/thread-list/thread-list.component";
 import { ThreadListItemComponent } from "./components/thread-list-item/thread-list-item.component";
+import { CurrentThreadComponent } from './components/current-thread/current-thread.component';
 import { MessageService } from "./services/message-service";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ThreadListComponent,
-    ThreadListItemComponent
+    ThreadListItemComponent,
+    CurrentThreadComponent
   ],
   imports: [
     BrowserModule,
