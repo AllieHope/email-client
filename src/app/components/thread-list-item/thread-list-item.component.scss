@@ -1,7 +1,10 @@
 .list-item-container { 
-    padding-top: 20px;
-    padding-bottom: 20px;
-    transition: .3s all;    
+    padding: 20px;
+    transition: .3s all;
+
+    &:hover {
+        background-color: #f9f9f9;
+    }
 }
 
 .label {
@@ -10,5 +13,6 @@
 
 .active {
     border-left: 1px solid;
-    padding-left: 10px;
+    padding-left: 40px;
+    background-color: #f9f9f9;
 }
