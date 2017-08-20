@@ -10,6 +10,7 @@ import * as moment from "moment";
 export class ThreadListItemComponent implements OnInit {
 
   @Input() message: Message;
+  @Input() active: boolean;
   formattedTime: any;
 
   constructor() { }

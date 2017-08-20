@@ -1,3 +1,10 @@
-<div class="thread-list-container">
-  <thread-list-item *ngFor="let message of messages" [message]="message"></thread-list-item>
-</div>
+<ng-container  *ngIf="messages">
+  <div class="thread-list-container" (click)="onSelectThread($event)">
+    <thread-list-item *ngFor="let message of messages"
+      [message]="message" 
+      [active]="message == currentMessage">
+    </thread-list-item>
+  </div>
+  <current-thread [message]="currentMessage.message"></current-thread>
+</ng-container>
+

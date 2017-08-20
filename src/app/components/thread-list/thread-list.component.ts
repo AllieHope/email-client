@@ -10,6 +10,7 @@ import { Component, OnInit } from "@angular/core";
 export class ThreadListComponent implements OnInit {
   messages$: Observable<MessageList>;
   messages: Message[];
+  currentMessage: Message;
 
   constructor(private messageService: MessageService) { }
 
@@ -18,6 +19,14 @@ export class ThreadListComponent implements OnInit {
 
     this.messages$.subscribe(msgList => {
       this.messages = Array.from(msgList.messages).sort();
+      this.currentMessage = this.messages[0];
     });
+  }
+
+  onSelectThread(message: any) {
+    this.currentMessage = message.target;
+
+    document.getElementsByClassName("active")[0].classList.remove("active");
+    message.target.classList.add("active");
   }
 }
